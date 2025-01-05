@@ -32,9 +32,8 @@ const Orders = () => {
                 .catch((error) => {
                     toast.error("Error cancelling order.");
                 });
+                setIsModalOpen(false);
         }
-        mation;
-        setIsModalOpen(false);
     };
 
     const handleCancelModal = () => {

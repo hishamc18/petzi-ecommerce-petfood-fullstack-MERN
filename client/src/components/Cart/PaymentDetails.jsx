@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { placeOrder, verifyPayment } from "../../features/orderSlice";
 import { useNavigate } from "react-router-dom";
-import { fetchCartDetails } from "../../features/cartSlice"; 
+import { fetchCartDetails } from "../../features/cartSlice";
 import "./cartStyle.css";
 import { toast, ToastContainer, Slide } from "react-toastify";
 
@@ -21,7 +21,7 @@ const PaymentDetails = () => {
     });
 
     const [errors, setErrors] = useState({});
-    const [isSubmitting, setIsSubmitting] = useState(false); 
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [paymentError, setPaymentError] = useState(null);
 
     // Fetch cart state from Redux store
@@ -29,8 +29,7 @@ const PaymentDetails = () => {
 
     useEffect(() => {
         if (!cart || cart.items?.length === 0) {
-            dispatch(fetchCartDetails())
-                .unwrap()
+            dispatch(fetchCartDetails()).unwrap();
         }
     }, [dispatch, cart]);
 
@@ -48,7 +47,6 @@ const PaymentDetails = () => {
         setErrors(formErrors);
         return Object.keys(formErrors).length === 0;
     };
-
 
     //submission handling
     const handleSubmit = (e) => {
@@ -77,7 +75,7 @@ const PaymentDetails = () => {
                     }
                 })
                 .catch((error) => {
-                    toast.error('Stock not available')
+                    toast.error("Stock Not Available");
                     setIsSubmitting(false);
                 });
         }
@@ -121,7 +119,13 @@ const PaymentDetails = () => {
                 upi: true,
                 netbanking: true,
                 wallet: true,
-                app: false,
+                config: {
+                    display: {
+                        hide: {
+                            methods: ["upi_collect"], // Hides the UPI intent (apps) option
+                        },
+                    },
+                },
             },
         };
 
@@ -139,10 +143,9 @@ const PaymentDetails = () => {
     };
 
     if (loading) {
-        return <span class="loader">L &nbsp; ading</span>
-        
+        return <span class="loader">L &nbsp; ading</span>;
     }
- 
+
     return (
         <>
             <ToastContainer
