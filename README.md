@@ -21,7 +21,6 @@ Libraries & Miscellaneous:
   - nodemon
 
 
-
 ## 🌐 Features
 
 ### User Side
