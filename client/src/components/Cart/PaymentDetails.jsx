@@ -77,7 +77,7 @@ const PaymentDetails = () => {
                     }
                 })
                 .catch((error) => {
-                    console.error("Error creating order:", error);
+                    toast.error('Stock not available')
                     setIsSubmitting(false);
                 });
         }

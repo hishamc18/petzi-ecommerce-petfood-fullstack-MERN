@@ -116,6 +116,11 @@ const Cart = () => {
                                         <p>
                                             Delivery by {item.productId.deliveryDate} | <span>Free</span>
                                         </p>
+                                        {item.productId.stock === 0 && (
+                                            <p className="stock-not-available">
+                                                Product stock not available
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
                             ))}

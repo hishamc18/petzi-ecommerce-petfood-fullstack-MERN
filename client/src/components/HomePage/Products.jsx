@@ -15,20 +15,26 @@ const Products = React.forwardRef((props, ref) => {
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     const handleAddToCartClick = (product) => {
-        dispatch(addProductToCart(product._id));
-        if (isAuthenticated) {
-            toast.success("Product added to Cart!");
-        } else {
-            toast.error("please Login");
+        dispatch(addProductToCart(product._id))
+            .then((response) => {
+                if (response?.payload) {
+                    toast.error(response.payload);
+                }
+                if (response?.payload?.message) {
+                    toast.success(response?.payload?.message)
+                }
+            })
+        if (!isAuthenticated) {
+            toast.error("Please Login");
         }
     };
 
     const handleAddToWishlistClick = (product) => {
         dispatch(addProductToWishlist(product._id)).then((response) => {
             if (response.payload.wishlist?.message) {
-                toast.success(response.payload.wishlist?.message);
+                toast.info(response.payload.wishlist?.message);
             } else {
-                toast.success('Added to wishlist, available under profile');
+                toast.success("Added to wishlist, available under profile");
             }
             dispatch(getUserWishlist());
         });
