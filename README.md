@@ -21,26 +21,27 @@ Libraries & Miscellaneous:
   - nodemon
 
 
+
 ## 🌐 Features
 
 ### User Side
-•⁠  ⁠🛍️ Product Browse: Browse and search through a variety of pet food products.
-•⁠  ⁠👤 Profile Management: Manage user profile details.
-•⁠  ⁠🛒 Cart: Add products to the cart for a seamless shopping experience.
-•⁠  ⁠💗 Wishlist: Save products to wishlist for future purchases.
-•⁠  ⁠📦 Orders: View and manage your orders.
-•⁠  ⁠🛍️ Checkout: Complete the purchase with Razorpay integration.
-•⁠  ⁠❌ Cancel Order: Option to cancel orders before shipment.
+  - ⁠🛍️ Product Browse:** Browse and search through a variety of pet food products.
+  - ⁠👤 Profile Management: Manage user profile details.
+  - ⁠🛒 Cart:** Add products to the cart for a seamless shopping experience.
+  - ⁠💗 Wishlist: Save products to wishlist for future purchases.
+  - ⁠📦 Orders: View and manage your orders.
+  - ⁠🛍️ Checkout: Complete the purchase with Razorpay integration.
+  - ⁠❌ Cancel Order: Option to cancel orders before shipment.
 
 ### Admin Side
-•⁠  ⁠🔄 Product Handling: Add, edit, and delete products.
-•⁠  ⁠🔧 User Handling: Fetch user details and manage blocking/unblocking users.
-•⁠  ⁠📦 Order Handling: Update order status (shipped, delivered).
-•⁠  ⁠📊 Statistics:
-  - Revenue insights
-  - Most selling products
-  - Top users with maximum purchases
-  - Visual representation of sales and revenue using Chart.js bar graphs
+  - ⁠🔄 Product Handling: Add, edit, and delete products.
+  - ⁠🔧 User Handling: Fetch user details and manage blocking/unblocking users.
+  - ⁠📦 Order Handling: Update order status (shipped, delivered).
+  - ⁠📊 Statistics:
+       - Revenue insights
+       - Most selling products
+       - Top users with maximum purchases
+       - Visual representation of sales and revenue using Chart.js bar graphs
 
 ## 🔒 Authorization
 
@@ -50,8 +51,8 @@ Libraries & Miscellaneous:
 
 ## 💡 Modern Features
 
-•⁠  ⁠Responsive & Aesthetic UI: Designed with a modern, user-friendly interface.
-•⁠  ⁠MVC Architecture: Follows a clean and organized MVC (Model-View-Controller) folder structure.
-•⁠  ⁠Error Handling: Includes custom error handlers and a global error handler for consistent error management.
+ - ⁠Responsive & Aesthetic UI: Designed with a modern, user-friendly interface.
+ -  ⁠MVC Architecture: Follows a clean and organized MVC (Model-View-Controller) folder structure.
+ -  ⁠Error Handling: Includes custom error handlers and a global error handler for consistent error management.
 
 📱 Stay connected! For any queries or support, feel free to reach out.
