@@ -15,15 +15,14 @@ const Products = React.forwardRef((props, ref) => {
     const [selectedProduct, setSelectedProduct] = useState(null);
 
     const handleAddToCartClick = (product) => {
-        dispatch(addProductToCart(product._id))
-            .then((response) => {
-                if (response?.payload) {
-                    toast.error(response.payload);
-                }
-                if (response?.payload?.message) {
-                    toast.success(response?.payload?.message)
-                }
-            })
+        dispatch(addProductToCart(product._id)).then((response) => {
+            if (response?.payload) {
+                toast.error(response.payload);
+            }
+            if (response?.payload?.message) {
+                toast.success(response?.payload?.message);
+            }
+        });
         if (!isAuthenticated) {
             toast.error("Please Login");
         }
@@ -79,7 +78,7 @@ const Products = React.forwardRef((props, ref) => {
                 limit={1}
             />
             <div className="products-container" ref={ref}>
-                {products.length === 0 && !loading && <p className="productError">No products found...😞</p>}
+                {products.length === 0 && !loading && <p className="productError">No products found..😞</p>}
                 {products.map((product) => (
                     <div className="card" key={product._id}>
                         <div className="wrapper">
