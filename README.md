@@ -45,7 +45,7 @@ Libraries & Miscellaneous:
 
 ## 🔒 Authorization
 
-•⁠  ⁠JWT Authentication:** Secure user authentication using JSON Web Tokens (JWT).
+•⁠ ⁠JWT Authentication: Secure user authentication using JSON Web Tokens (JWT).
   - Access Token: Stored in cookies for secure, client-side authentication.
   - Refresh Token: Ensures a seamless user experience by refreshing the session automatically.
 
