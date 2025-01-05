@@ -24,9 +24,9 @@ Libraries & Miscellaneous:
 ## 🌐 Features
 
 ### User Side
-•⁠  ⁠🛍️ Product Browse:** Browse and search through a variety of pet food products.
+•⁠  ⁠🛍️ Product Browse: Browse and search through a variety of pet food products.
 •⁠  ⁠👤 Profile Management: Manage user profile details.
-•⁠  ⁠🛒 Cart:** Add products to the cart for a seamless shopping experience.
+•⁠  ⁠🛒 Cart: Add products to the cart for a seamless shopping experience.
 •⁠  ⁠💗 Wishlist: Save products to wishlist for future purchases.
 •⁠  ⁠📦 Orders: View and manage your orders.
 •⁠  ⁠🛍️ Checkout: Complete the purchase with Razorpay integration.
