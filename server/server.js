@@ -13,9 +13,11 @@ const adminRoutes = require('./routes/adminRoutes');
 
 const app = express();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+
 // CORS configuration
 const corsOptions = {
-  origin: ['https://petzi-ecommerce-petfood.vercel.app' , 'http://localhost:5173'],
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], // Allowed methods
   credentials: true, // Allow credentials (cookies, HTTP authentication)
 };
