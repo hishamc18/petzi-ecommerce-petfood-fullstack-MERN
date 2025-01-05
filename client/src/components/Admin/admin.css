@@ -1,0 +1,1587 @@
+.admin-homepage {
+    display: flex;
+    flex-direction: column;
+    height: 97vh;
+}
+
+.adminNavbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 51;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adminlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.adminlogo h1 {
+    font-size: 20px;
+}
+
+.adminLogoutBtn {
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminlgbtn {
+    margin-top: -22px;
+}
+
+.adminLogoutText {
+    margin-right: -57px;
+    margin-top: -22px;
+}
+
+.adminLogoutBtn i {
+    font-size: 25px;
+}
+
+.adminLogoutBtn label {
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+
+.adminContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    margin-top: 6em;
+}
+
+
+.adminMenubar {
+    border-radius: 10px;
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    height: 100%;
+    z-index: 4;
+}
+
+.adminMenubar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.adminMenubar li {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    padding: 10px 15px;
+}
+
+.adminMenubar li:hover {
+    background-color: #44836d;
+    color: white;
+}
+
+.adminMenubar li.active {
+    background-color: #44836d;
+    color: white;
+    transform: scale(1.05);
+}
+
+.adminMenubar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 12px 16px;
+}
+
+.adminContent {
+    width: 80%;
+    padding-left: 13px;
+    background-color: #cecece;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    height: 89vh;
+    overflow: auto;
+}
+
+/* Handle Products Styling */
+.handle-products {
+    padding: 15px;
+    background-color: #d7e8df;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.handle-products h3 {
+    color: #ffffff;
+    margin-bottom: 0.8em;
+}
+
+.wrapHandleProductHead {
+    margin-bottom: 20px;
+}
+
+/* Product Form Styles */
+.product-form {
+    align-content: center;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    background-color: #3e7b62;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-form div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.productField {
+    display: flex;
+    flex-direction: column;
+}
+
+.productFieldContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.productFieldINCDES {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.productFieldINCDES textarea {
+    width: 300px;
+    height: 70px;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+.productField label {
+    margin-left: 10px;
+}
+
+.product-form .inputWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-form input {
+    margin: 12px 5px;
+    width: 350px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.product-form select {
+    width: 300px;
+    padding: 13px;
+    margin: 12px 5px;
+    border-radius: 6px;
+}
+
+.product-form input::placeholder {
+    font-weight: 600;
+    color: #5e5d5d;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.product-form input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.product-form h3 {
+    letter-spacing: 2px;
+}
+
+.viewAndSearch {
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminSearchProducts input {
+    border-radius: 20px;
+    padding: 0 10px;
+    border: 2px solid rgb(2, 66, 2);
+    width: 150px;
+}
+
+.suggestions-list-admin {
+    margin-top: 35px;
+    margin-left: 1px;
+}
+
+/* Modal Styling */
+.adminModal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30;
+}
+
+.adminModal-content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: auto;
+    padding: 1px;
+}
+
+.adminModal-close {
+    position: absolute;
+    top: 19px;
+    right: 27px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+}
+
+.adminModal-close:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .adminModal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .adminModal-close {
+        font-size: 24px;
+        top: 10px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adminModal-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .adminModal-close {
+        font-size: 20px;
+        top: 45px;
+        right: 10px;
+        color: black;
+    }
+}
+
+@media (max-width: 390px) {
+    .adminModal-content {
+        margin-top: 5em;
+        transform: scale(0.8);
+    }
+
+    .adminModal-close {
+        position: absolute;
+
+    }
+}
+
+.updateBtn {
+    margin: 10px auto;
+}
+
+.product-form .addEditbutton {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+}
+
+.product-form .addEditbutton:hover {
+    font-size: 0.2em;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .adminContainer {
+        padding: 0;
+    }
+
+    .product-form h3,
+    .adminContainer h2 {
+        text-align: center;
+    }
+
+    .product-form input {
+        width: calc(100% - 10px);
+    }
+
+    .product-form {
+        height: 70%;
+        transform: scaleY(0.75);
+        margin: 0;
+    }
+
+    .product-form input,
+    .product-form select,
+    .product-form textarea {
+        padding: 5px;
+    }
+
+    .adminModal-close {
+        top: 35px;
+        right: 31px;
+        font-size: 28px;
+    }
+}
+
+/* View Switch Styles */
+.view-switch {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+}
+
+.wrapSelect {
+    display: flex;
+    gap: 2em;
+}
+
+.view-switch select {
+    border-radius: 8px;
+    padding: 5px;
+    border: 2px rgb(5, 95, 5) solid;
+}
+
+/* Products Listing Styles */
+.productsListing {
+    max-height: calc(100vh - 28.3em);
+    overflow-y: auto;
+    border-top: 2px solid #007bff;
+    padding: 20px;
+}
+
+
+.paginationInAdminProducts {
+    margin-top: 20px;
+    transform: scale(0.8);
+}
+
+@media (max-width:800px) {
+    .productsListing {
+        max-height: 600px;
+    }
+
+    .adminMenubar {
+        position: fixed;
+        margin-top: 8px;
+        max-height: 200px;
+    }
+
+    .adminContent {
+        margin-top: 11em;
+    }
+
+    .adminMenubar {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    .adminMenubar li {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .adminMenubar ul {
+        padding: 1px;
+        margin: 0;
+    }
+}
+
+/* Product Table Styles */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.product-table th,
+.product-table td {
+    border: 1px solid #c8c7c7;
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.product-table td {
+    max-width: 140px;
+}
+
+.product-table th {
+    background-color: #f2f2f2;
+    color: #141414;
+}
+
+.product-table tr:hover {
+    background-color: #d4d3d3;
+}
+
+.productActions {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.productActions button {
+    background-color: #333;
+    color: white;
+    width: 70px;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 5px;
+}
+
+.productActions button:hover {
+    transform: scale(1.08);
+    transition: 0.5s;
+}
+
+/* Product Cards Styles */
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card h4 {
+    font-size: 15px;
+    color: black;
+}
+
+.product-card p {
+    font-size: 14px;
+}
+
+.product-card strong {
+    font-weight: 650;
+}
+
+.product-card {
+    transform: scale(0.98);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    width: calc(24% - 15px);
+    height: 320px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #8df9c1;
+    box-shadow: 10px 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 8px;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 70%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+.product-card .wrapCardBtns {
+    margin-top: 5px;
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.product-card .wrapCardBtns button {
+    width: 50px;
+    padding: 2px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fc6464;
+    color: white;
+    font-size: 13px;
+}
+
+.product-details .productActions button {
+    margin: 0 -4px;
+    width: 40%;
+    padding: 5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: rgb(255, 255, 255);
+    background-color: #959997;
+    transform: scale(0.99);
+}
+
+.product-details .productActions {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* Button Styles */
+.addEditbutton {
+    height: 50px;
+    width: 13%;
+    background-color: #141722;
+    border: 2px solid rgb(255, 166, 0);
+    color: #ffffff;
+    transition: 0.6s;
+    font-size: 16px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.addEditbutton span {
+    transition: 0.5s;
+}
+
+.addEditbutton:hover {
+    width: 60px;
+    background-color: rgba(51, 34, 51, 0.815);
+    box-shadow: 20px 20px 96px #bebebe, -20px -20px 96px #ffffff;
+}
+
+.addEditbutton:hover span {
+    font-size: 0.4rem;
+}
+
+/* Responsive Design for Admin */
+@media (max-width: 1024px) {
+    .adminMenubar {
+        width: 25%;
+    }
+
+    .adminContent {
+        width: 75%;
+    }
+
+    .product-card {
+        width: calc(33.33% - 15px);
+    }
+}
+
+@media (max-width: 1070px) {
+    .adminContainer {
+        flex-direction: column;
+    }
+
+    .adminNavbar {
+        height: 12%;
+    }
+
+    .adminMenubar {
+        top: 10%;
+        width: 100%;
+        height: 35%;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .adminContent {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .product-card {
+        width: calc(50% - 15px);
+    }
+
+}
+
+@media (max-width: 576px) {
+    .adminNavbar {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .product-card {
+        width: calc(100% - 15px);
+    }
+}
+
+.wrapAddBtnandCard {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 7em;
+}
+
+@media (max-width:1100px) {
+    .wrapAddBtnandCard {
+        flex-direction: column;
+        gap: 0;
+    }
+
+
+    .addEditbutton {
+        width: 150px;
+        transform: scale(0.8);
+    }
+
+    .view-switch {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5em;
+    }
+
+    .wrapSelect {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wrapSelect select {
+        margin-top: 8px;
+    }
+
+    .product-counts {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.Admincard {
+    position: relative;
+    border: 3px solid rgb(14, 15, 14);
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 20px;
+}
+
+.Admincard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.Cardcontent {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background: linear-gradient(335deg, #000000 0%, #949393 100%);
+}
+
+.Cardheading {
+    font-size: 19px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.Cardcontent p {
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.Cardcontent p strong {
+    color: #e2c196;
+}
+
+
+.productsListing h2,
+.wrapHandleProductHead h2 {
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+/* Dashboard */
+.admin-dashboard-container {
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+    background-color: #d7e8df;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.DashboardHead h1 {
+    border-bottom: #007bff 2px solid;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #14213D;
+    margin-bottom: 18px;
+}
+
+.DashboardHead span {
+    color: #d38609;
+}
+
+.admin-dashCardcontent {
+    z-index: 11;
+    text-align: center;
+}
+
+.admin-dashCardcontent ul {
+    list-style-type: none;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+.admin-dashCardcontent ul li {
+    padding-bottom: 6px;
+}
+
+/* Card container */
+.admin-dashboardCard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6em;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: 1em;
+    height: calc(100vh - 13em);
+    overflow-y: auto;
+}
+
+.admin-dashboard-container::-webkit-scrollbar {
+    display: none;
+}
+
+.allDashBoardCards {
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .allDashBoardCards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .admin-recent-orders-container {
+        transform: scale(0.7);
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .allDashBoardCards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Individual card styling */
+.admin-dashcard {
+    position: relative;
+    width: 18em;
+    min-height: 200px;
+    border-radius: 14px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    padding: 20px;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.admin-dashcard:nth-child(5) {
+    width: 22em;
+}
+
+.admin-dashcard:nth-child(4) {
+    width: 22em;
+}
+
+.admin-dashcard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Background blur effect */
+.admin-bg {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    z-index: 0;
+    background: rgba(15, 41, 54, 0.95);
+    backdrop-filter: blur(24px);
+    border-radius: 10px;
+    overflow: hidden;
+    outline: 2px solid white;
+}
+
+/* Blob animation */
+.admin-blob {
+    position: absolute;
+    z-index: -11;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #242a24;
+    opacity: 1;
+    filter: blur(1);
+    animation: admin-blob-bounce 5s infinite ease;
+}
+
+@keyframes admin-blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+/* Card content */
+.admin-dashCardcontent h3 {
+    font-size: 1.5rem;
+    color: hsl(38, 83%, 60%);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.admin-dashCardcontent p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.admin-dashCardcontent strong {
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.admin-dashCardcontent .adminDetailsCard {
+    font-size: 18px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+
+    .admin-dashcard {
+        min-height: 150px;
+        padding: 15px;
+    }
+
+    .admin-dashCardcontent h3 {
+        font-size: 1.3rem;
+    }
+
+    .admin-dashCardcontent p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .admin-dashboardCard-container {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .admin-dashcard {
+        min-height: 140px;
+        padding: 10px;
+    }
+
+    .admin-dashCardcontent h3 {
+        font-size: 1.2rem;
+    }
+
+    .admin-dashCardcontent p {
+        font-size: 1rem;
+    }
+}
+
+.revenueContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    background-color: rgba(97, 162, 126, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.revenueContainer h3 {
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.revenueContainer h2 {
+    text-align: center;
+}
+
+.revenueDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+}
+
+.revenueContainer2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+
+/* Table structure */
+.admin-recent-orders-table {
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Table Headers */
+.admin-recent-orders-table thead th {
+    background-color: #3d95ed;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    width: 10%;
+}
+
+/* Table Rows */
+.admin-recent-orders-table tbody tr {
+    border-bottom: 1px solid #f2f2f2;
+    transition: background-color 0.2s ease-in;
+}
+
+.admin-recent-orders-table tbody tr:nth-child(even) {
+    background-color: #f0eded;
+}
+
+.admin-recent-orders-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.admin-recent-orders-table td {
+    padding: 15px 19px;
+    color: #333;
+}
+
+/* Responsive Typography */
+.admin-recent-orders-table td,
+.admin-recent-orders-table th {
+    font-size: 0.9rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .admin-recent-orders-table {
+        font-size: 0.8rem;
+        display: block;
+    }
+
+    .admin-recent-orders-table td,
+    .admin-recent-orders-table th {
+        font-size: 0.5rem;
+    }
+
+    .admin-recent-orders-table thead {
+        display: table-header-group;
+    }
+
+    .admin-recent-orders-table thead th {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .admin-recent-orders-table tbody {
+        display: block;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+
+    .admin-recent-orders-table tbody tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .admin-recent-orders-table tbody tr td {
+        display: table-cell;
+        padding: 6px 4px;
+        border: 1px solid #f2f2f2;
+    }
+
+    .admin-recent-orders-table tbody tr td:nth-child(odd) {
+        font-weight: bold;
+    }
+
+    .admin-recent-orders-container {
+        padding: 6px;
+        width: 100%;
+    }
+}
+
+.admin-recent-orders-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.admin-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    margin: -4em auto;
+}
+
+.handleViewBtn {
+    transform: scale(0.9);
+    border-top-left-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+}
+
+@media (max-width: 768px) {
+    .admin-table-container {
+        grid-template-columns: 1fr;
+        margin: 0;
+        margin-top: -5em;
+        gap: 3em;
+    }
+}
+
+
+
+/* UserDetails container styling */
+@media (max-width: 720px) {
+    .user-Tables {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+}
+
+
+.admin-user-details {
+    /* padding: 20px; */
+    background-color: #d7e8df;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 89vh;
+    overflow: auto;
+}
+
+
+
+.admin-user-details h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.admin-user-table {
+    width: 100%;
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-user-table th,
+.admin-user-table td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.admin-user-table th {
+    background-color: #34495e;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.admin-user-table td {
+    border-bottom: 1px solid #eaeaea;
+    font-size: 0.95rem;
+}
+
+.admin-user-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Action button */
+.handleViewBtn {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.handleViewBtn:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+
+/* Modal overlay styling */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(55, 103, 79, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 123;
+}
+
+/* Modal content styling */
+.admin-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-height: 95vh;
+    overflow-y: auto;
+    transform: scale(0.94);
+}
+
+/* Modal close button */
+.admin-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 13px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.admin-modal-close:hover {
+    color: #e74c3c;
+    /* Change color when hovering */
+    transform: scale(1.1);
+    transition: 0.4s;
+}
+
+.admin-modal-content h4 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Cart details table with scroll */
+.admin-cart-details,
+.admin-order-details {
+    width: 100%;
+    border-collapse: collapse;
+    max-height: 220px;
+    overflow-y: auto;
+    display: block;
+}
+
+.admin-cart-details th,
+.admin-order-details th,
+.admin-cart-details td,
+.admin-order-details td {
+    padding: 10px;
+    border: 2px solid #ddd;
+    text-align: left;
+}
+
+.admin-cart-details th,
+.admin-order-details th {
+    background-color: #34495e;
+    color: white;
+}
+
+.admin-cart-details td,
+.admin-order-details td {
+    background-color: #f9f9f9;
+}
+
+/* User summary cards */
+.admin-user-summary {
+    display: flex;
+    justify-content: center;
+}
+
+.admin-summary-card {
+    background-color: #4c6559;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    margin-right: 30px;
+}
+
+.admin-summary-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.admin-summary-card p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.admin-summary-card:last-child {
+    margin-right: 0;
+}
+
+
+.adminBlockBtnDiv button:hover {
+    background-color: rgb(246, 76, 76);
+    transition: 0.4s;
+}
+
+
+.userDetailsData p {
+    margin-top: 7px;
+}
+
+.wrapTablesInUserDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Responsive design */
+
+@media (max-width: 768px) {
+    .admin-modal-content {
+        padding: 0;
+        margin: 20px;
+        width: 90%;
+    }
+
+    .admin-cart-details,
+    .admin-order-details {
+        transform: scale(0.8);
+    }
+
+    .adminBlockBtnDiv {
+        transform: scale(0.6);
+        top: 4.4%;
+        left: -12.4%;
+    }
+
+    .admin-user-summary {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .admin-user-summary h4 {
+        font-size: 13px;
+    }
+
+    .admin-user-summary p {
+        font-size: 15px;
+    }
+
+    .admin-summary-card {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+
+    .userDetailsData {
+        font-size: 10px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .admin-modal-content {
+        padding: 15px;
+        margin: 10px;
+        width: 95%;
+    }
+
+    .admin-user-table {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+.userDetailsInModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: -34px;
+    background-color: rgb(58, 131, 98, 0.3);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    position: relative;
+}
+
+.adminBlockBtnDiv .adminBlockBtn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgb(241, 61, 61);
+    border: none;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.adminBlockBtnDiv .adminBlockBtn:hover {
+    background-color: rgb(255, 0, 0);
+    transition: 0.2s;
+}
+
+.user-Tables {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px 20px;
+}
+
+.user-Tables h2 {
+    font-size: 24px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .adminBlockBtnDiv button {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .adminBlockBtnDiv button {
+        font-size: 0.8rem;
+        padding: 7px 15px;
+
+    }
+}
+
+
+
+.confirmation-box {
+    position: absolute;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+    border-radius: 4px;
+}
+
+.confirmation-box p {
+    margin-right: 10px;
+}
+
+.yes-btn,
+.no-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    font-weight: 600;
+}
+
+.yes-btn {
+    background-color: #227c1f;
+    color: white;
+}
+
+.no-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.productDeleteConfirm {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.deleteconfirmButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;
+}
+
+
+
+.deletecancelButton {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 50px;
+}
+
+/*********** Handle Products **********/
+.admin-handleOrder {
+    padding: 20px;
+    background-color: #d7e8df;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 89vh;
+    overflow-y: auto;
+}
+
+.orders-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.orders-table h2 {
+    font-size: 27px;
+}
+
+.admin-order-table {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.admin-order-table .pagination-controls {
+    transform: scale(0.8);
+}
+
+
+.shippingAndOrderModal {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
